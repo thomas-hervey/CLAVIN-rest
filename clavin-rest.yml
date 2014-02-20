@@ -1,0 +1,11 @@
+luceneDir: IndexDirectory
+maxHitDepth: 3
+maxContextWindow: 5
+fuzzy: false 
+
+
+http:
+  port: 9090
+  adminPort: 9091
+
+
