@@ -21,7 +21,7 @@ CLAVIN Rest
 
 ### Download CLAVIN yaml configuration file 
 
-    curl -O https://raw2.github.com/Berico-Technologies/CLAVIN-rest/clavin-rest.yaml
+    curl -O https://raw2.github.com/Berico-Technologies/CLAVIN-rest/master/clavin-rest.yml 
 
 ### Run the CLAVIN rest server 
 
