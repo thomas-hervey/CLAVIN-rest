@@ -24,8 +24,9 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-
-    <script src="js/clavin.js"></script>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+     <script src="js/clavin.js"></script>
   </head>
 
   <body>
@@ -58,10 +59,30 @@
 	<br clear="all">
         <button onclick="submit()">Submit</button>
 	<br clear="all">
-	<pre id="id_results"></pre>
+	<center>
+	  <div id="map" style="width: 600px; height: 400px"></div>
+	</center>
+	<br clear="all">
+	<pre id="id_results"></pre>	
+
       </div>
 
-      
+
+
+     <script>
+       var map = L.map('map').setView([0, 0], 1);
+
+       // add an OpenStreetMap tile layer
+       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+       // add a marker in the given location, attach some popup content to it and open the popup
+       //L.marker([51.5, -0.09]).addTo(map)
+       //.bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+       //.openPopup();
+
+     </script> 
       
 
 
