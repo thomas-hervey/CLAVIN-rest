@@ -1,13 +1,16 @@
 package com.bericotech.clavin.rest;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.bazaarvoice.dropwizard.assets.AssetsBundleConfiguration;
+import com.bazaarvoice.dropwizard.assets.AssetsConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.yammer.dropwizard.config.Configuration;
 
-public class ClavinRestConfiguration extends Configuration {
+public class ClavinRestConfiguration extends Configuration implements AssetsBundleConfiguration{
 
 	@NotEmpty
     @JsonProperty
@@ -25,6 +28,11 @@ public class ClavinRestConfiguration extends Configuration {
     @JsonProperty
     private Boolean fuzzy; 
     
+    @Valid
+    @NotNull
+    @JsonProperty
+    private final AssetsConfiguration assets = new AssetsConfiguration();
+    
     public String getLuceneDir() {
         return luceneDir;
     }
@@ -40,5 +48,9 @@ public class ClavinRestConfiguration extends Configuration {
     public Integer getMaxContextWindow() {
     	return maxContextWindow;
     }
+
+	public AssetsConfiguration getAssetsConfiguration() {
+		return assets;
+	}
     
 }

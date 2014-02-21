@@ -12,7 +12,7 @@ import com.bericotech.clavin.GeoParser;
 import com.bericotech.clavin.resolver.ResolvedLocation;
 import com.bericotech.clavin.rest.core.ResolvedLocations;
 
-@Path("/api/v0")
+@Path("/v0")
 @Produces(MediaType.APPLICATION_JSON)
 public class ClavinRestResource {
     private final GeoParser parser;    

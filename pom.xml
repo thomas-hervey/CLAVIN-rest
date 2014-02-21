@@ -90,6 +90,11 @@
         <version>0.6.2</version>
     </dependency>    
     <dependency>
+      <groupId>com.bazaarvoice.dropwizard</groupId>
+      <artifactId>dropwizard-configurable-assets-bundle</artifactId>
+      <version>0.1.11</version> 
+    </dependency>
+    <dependency>
       <groupId>com.bericotech</groupId>
       <artifactId>clavin-nerd</artifactId>
       <version>1.1-SNAPSHOT-20140218-2</version>
