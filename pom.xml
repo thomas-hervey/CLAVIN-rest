@@ -20,7 +20,7 @@
       </snapshots>
       <id>amazon</id>
       <name>Amazon Test Repo</name>
-      <url>https://clavin.s3.amazon.com/snapshots/</url>
+      <url>https://clavin.s3.amazonaws.com/snapshots/</url>
     </repository>
   </repositories>
     
