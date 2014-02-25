@@ -5,7 +5,7 @@ CLAVIN Rest
 
 ### Download the CLAVIN Rest Server 
 
-    curl http://clavin.s3.amazonaws.com/snapshots/com/bericotech/clavin-rest/0.1.0-SNAPSHOT/clavin-rest-0.1.0-20140220.215805-1.jar -o clavin-rest.jar 
+    curl http://clavin.s3.amazonaws.com/snapshots/com/bericotech/clavin-rest/0.1.0-SNAPSHOT/clavin-rest-0.1.0-20140225.135705-2.jar -o clavin-rest.jar 
 
 ### Download CLAVIN Bundle snapshot 
 
