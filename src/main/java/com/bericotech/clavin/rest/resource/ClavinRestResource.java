@@ -11,6 +11,7 @@ import java.util.List;
 import com.bericotech.clavin.GeoParser;
 import com.bericotech.clavin.resolver.ResolvedLocation;
 import com.bericotech.clavin.rest.core.ResolvedLocations;
+import com.bericotech.clavin.rest.core.ResolvedLocationsMinimum;
 
 @Path("/v0")
 @Produces(MediaType.APPLICATION_JSON)
@@ -46,4 +47,29 @@ public class ClavinRestResource {
         return Response.status(200).entity(result).build();
         
     }
+    
+    
+    @POST
+    @Path("/geotagmin")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response extractAndResolveSimpleShortLocationsFromText(String text) {
+    
+        ResolvedLocationsMinimum result = null;
+        try {
+            List<ResolvedLocation> resolvedLocations = parser.parse(text);
+            result = new ResolvedLocationsMinimum(resolvedLocations);
+            
+        
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(500).entity(e).build();
+        }
+      
+        return Response.status(200).entity(result).build();
+        
+    }
+    
+    
+    
 }
