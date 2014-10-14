@@ -5,7 +5,7 @@ CLAVIN Rest
 
 ### Download the CLAVIN Rest Server 
 
-    curl -L https://github.com/tlpinney/CLAVIN-rest/releases/download/0.2.0/clavin-rest-0.2.0.jar -o clavin-rest.jar
+    curl -L https://github.com/Berico-Technologies/CLAVIN-rest/releases/download/0.2.0/clavin-rest-0.2.0.jar -o clavin-rest.jar
 
 ### Download Geonames 
   
