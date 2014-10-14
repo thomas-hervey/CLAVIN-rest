@@ -11,11 +11,11 @@ public class ResolvedLocationMinimum {
 	public final double longitude;
 	
 	ResolvedLocationMinimum(ResolvedLocation rl) {
-		this.geonameID = rl.geoname.geonameID;
-		this.name = rl.geoname.name;
-		this.countryCode = rl.geoname.primaryCountryCode.toString();
-		this.latitude = rl.geoname.latitude;
-		this.longitude= rl.geoname.longitude;
+		this.geonameID = rl.getGeoname().getGeonameID();
+		this.name = rl.getGeoname().getName();
+		this.countryCode = rl.getGeoname().getPrimaryCountryCode().toString();
+		this.latitude = rl.getGeoname().getLatitude();
+		this.longitude= rl.getGeoname().getLongitude();
 	}
 
 }
