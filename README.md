@@ -5,6 +5,8 @@ CLAVIN Rest
 
 ### Download the CLAVIN Rest Server 
 
+    curl -L https://github.com/tlpinney/CLAVIN-rest/releases/download/0.2.0/clavin-rest-0.2.0.jar -o clavin-rest.jar
+
 ### Download Geonames 
   
     curl -O http://download.geonames.org/export/dump/allCountries.zip
