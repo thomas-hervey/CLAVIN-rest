@@ -4,7 +4,7 @@ CLAVIN Rest
 ## Quick Start 
 
 ### Download the CLAVIN Rest Server 
- 
+
 ### Download Geonames 
   
     curl -O http://download.geonames.org/export/dump/allCountries.zip
