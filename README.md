@@ -21,7 +21,7 @@ CLAVIN Rest
 
 ### Create a CLAVIN gazetteer 
     
-    java -Xmx2048m -jar clavin-rest.jar clavin-rest.yml
+    java -Xmx2048m -jar clavin-rest.jar index clavin-rest.yml
 
 ### Run the CLAVIN rest server 
 
