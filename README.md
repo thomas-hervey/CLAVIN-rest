@@ -17,11 +17,11 @@ CLAVIN Rest
 
 ### Download CLAVIN yaml configuration file 
 
-    curl -O https://raw2.github.com/Berico-Technologies/CLAVIN-rest/master/clavin-rest.yml 
+    curl -O https://raw.githubusercontent.com/Berico-Technologies/CLAVIN-rest/master/clavin-rest.yml 
 
 ### Create a CLAVIN gazetteer 
     
-    java -Xmx2048m -jar clavin-rest.jar index clavin-rest.yml
+    java -Xmx4096m -jar clavin-rest.jar index clavin-rest.yml
 
 ### Run the CLAVIN rest server 
 
@@ -29,7 +29,7 @@ CLAVIN Rest
 
 ### Geotag an article  
 
-    curl -O https://raw2.github.com/Berico-Technologies/CLAVIN/master/src/test/resources/sample-docs/Somalia-doc.txt
+    curl -O https://raw.githubusercontent.com/Berico-Technologies/CLAVIN/master/src/test/resources/sample-docs/Somalia-doc.txt
 
     curl -s --data @Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v0/geotag
 
