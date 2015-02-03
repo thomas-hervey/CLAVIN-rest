@@ -40,7 +40,7 @@ public class ClavinRestService extends Service<ClavinRestConfiguration> {
         final String luceneDir = configuration.getLuceneDir();
         final Integer maxHitDepth = configuration.getMaxHitDepth();
         final Integer maxContextWindow = configuration.getMaxContextWindow();
-        final Boolean fuzzy = configuration.getFuzzy();
+        // final Boolean fuzzy = configuration.getFuzzy();
              
         Gazetteer gazetteer = new LuceneGazetteer(new File(luceneDir));
 
