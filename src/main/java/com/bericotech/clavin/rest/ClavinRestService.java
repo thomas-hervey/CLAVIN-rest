@@ -10,7 +10,6 @@ import com.bericotech.clavin.rest.command.IndexCommand;
 import org.apache.lucene.queryparser.classic.ParseException;
 
 import com.yammer.dropwizard.Service;
-import com.yammer.dropwizard.assets.AssetsBundle;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;

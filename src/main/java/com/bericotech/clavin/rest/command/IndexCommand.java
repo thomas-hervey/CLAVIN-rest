@@ -4,10 +4,7 @@ import com.bericotech.clavin.index.IndexDirectoryBuilder;
 import com.bericotech.clavin.rest.ClavinRestConfiguration;
 import com.yammer.dropwizard.cli.ConfiguredCommand;
 import com.yammer.dropwizard.config.Bootstrap;
-import net.sourceforge.argparse4j.impl.Arguments;
 import net.sourceforge.argparse4j.inf.Namespace;
-import net.sourceforge.argparse4j.inf.Subparser;
-import static java.lang.System.out;
 
 
 
