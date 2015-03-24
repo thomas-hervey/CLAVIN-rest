@@ -103,7 +103,7 @@
         </dependency>
     </dependencies>
 
-  <reporting>
+   <reporting>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -152,4 +152,16 @@
       </plugin>
     </plugins>
   </reporting>
+  
+    <repositories>
+    <repository>
+      <id>berico-snapshot</id>
+      <name>Berico Snapshots</name>
+      <url>http://nexus.bericotechnologies.com/content/repositories/snapshots</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>
