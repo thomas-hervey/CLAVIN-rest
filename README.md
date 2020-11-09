@@ -1,12 +1,13 @@
 CLAVIN Rest
 ===========
 
-## Quick Start 
+We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP methods remain unchanged, but we did update the API version.  So whereas prior you would go to http://localhost:9090/api/v0/geotag, you will now go to http://localhost:9090/api/v1/geotag. The application now has a application.yaml file that contains the available settings.  Here are the instructions for getting up and running.  
 
-### Download the CLAVIN Rest Server 
+### Download the CLAVIN Rest Project
 
-    curl -L https://github.com/Berico-Technologies/CLAVIN-rest/releases/download/0.2.0/clavin-rest-0.2.0.jar -o clavin-rest.jar
-
+    git clone https://github.com/Novetta/CLAVIN.git
+    cd CLAVIN-rest
+	
 ### Download Geonames 
   
     curl -O http://download.geonames.org/export/dump/allCountries.zip
@@ -15,29 +16,31 @@ CLAVIN Rest
 
     unzip allCountries.zip
 
-### Download CLAVIN yaml configuration file 
+### Inspect the application.yaml
 
-    curl -O https://raw.githubusercontent.com/Berico-Technologies/CLAVIN-rest/master/clavin-rest.yml 
+	Look at (and edit if you so choose) the default configuration settings contained within the application.yaml.
+
+### Build the ClAVIN Rest jar
+	mvn clean package
 
 ### Create a CLAVIN gazetteer 
     
-    java -Xmx4096m -jar clavin-rest.jar index clavin-rest.yml
+    java -Xmx4096m -jar -Dspring.profiles.active=Build target/clavin-rest.jar
 
-### Run the CLAVIN rest server 
+### Run the CLAVIN Rest server 
 
-    java -Xmx2048m -jar clavin-rest.jar server clavin-rest.yml 
+    java -Xmx2048m -jar target/clavin-rest.jar 
 
 ### Geotag an article  
 
-    curl -O https://raw.githubusercontent.com/Berico-Technologies/CLAVIN/master/src/test/resources/sample-docs/Somalia-doc.txt
+	From within the clavin-rest project, run the following curl command to retrieve all relevant geonames data for each location:
 
-    curl -s --data @Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v0/geotag
+	curl -s --data src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotag
 
+	From within the clavin-rest project, run the following curl command to retrieve minimized geonames data for each location:
 
-## Package creation 
+	curl -s --data src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotagmin	
 
-    git clone https://github.com/Berico-Technologies/CLAVIN-rest
-    cd CLAVIN-rest
-    mvn package 
+###	CLAVIN Rest web page
 
-
+	You can also see a very rudimentary web page by going to http://localhost:9090.  Copy and paste the Somalia-doc.txt file contents into the text area, and hit submit.  You'll wait for a few seconds (there is no loader to let you know its working), and voila! The map will be populated, and the resulting JSON will appear below the map. 
