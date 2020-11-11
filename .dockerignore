@@ -1,0 +1,10 @@
+src
+target
+!target/clavin-rest.jar
+IndexDirectory
+LICENSE
+README.md
+allCountries.txt
+pom.xml
+.cache
+.git
