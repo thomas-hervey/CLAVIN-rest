@@ -3,3 +3,6 @@
 /.project
 /.settings/
 
+/IndexDirectory/
+/allCountries.txt
+/.DS_Store

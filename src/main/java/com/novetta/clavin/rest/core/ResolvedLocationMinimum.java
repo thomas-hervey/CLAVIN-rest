@@ -1,4 +1,4 @@
-package com.bericotech.clavin.rest.core;
+package com.novetta.clavin.rest.core;
 
 import com.bericotech.clavin.resolver.ResolvedLocation;
 
