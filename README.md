@@ -36,11 +36,11 @@ Look at (and edit if you so choose) the default configuration settings contained
 
 From within the clavin-rest project, run the following curl command to retrieve all relevant geonames data for each location:
 
-	curl -s --data src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotag
+	curl -s --data @src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotag
 
 From within the clavin-rest project, run the following curl command to retrieve minimized geonames data for each location:	
 
-	curl -s --data src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotagmin	
+	curl -s --data @src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotagmin	
 
 ###	CLAVIN Rest web page
 
