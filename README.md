@@ -1,7 +1,7 @@
 CLAVIN Rest
 ===========
 
-We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP methods remain unchanged, but we did update the API version.  So whereas prior you would go to http://localhost:9090/api/v0/geotag, you will now go to http://localhost:9090/api/v1/geotag. The application now has a application.yaml file that contains the available settings.  Here are the instructions for getting up and running.  
+We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP methods remain unchanged, but we did update the API version.  So whereas prior you would go to http://localhost:9090/api/v0/geotag, you will now go to http://localhost:9090/api/v1/geotag. The application now has a application.yml file that contains the available settings.  Here are the instructions for getting up and running.  
 
 ### Download the CLAVIN Rest Project
 
@@ -16,9 +16,9 @@ We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP met
 
     unzip allCountries.zip
 
-### Inspect the application.yaml
+### Inspect the application.yml
 
-	Look at (and edit if you so choose) the default configuration settings contained within the application.yaml.
+	Look at (and edit if you so choose) the default configuration settings contained within the application.yml.
 
 ### Build the ClAVIN Rest jar
 	mvn clean package
