@@ -18,9 +18,10 @@ We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP met
 
 ### Inspect the application.yml
 
-	Look at (and edit if you so choose) the default configuration settings contained within the application.yml.
+Look at (and edit if you so choose) the default configuration settings contained within the application.yml.
 
 ### Build the ClAVIN Rest jar
+
 	mvn clean package
 
 ### Create a CLAVIN gazetteer 
@@ -33,14 +34,14 @@ We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP met
 
 ### Geotag an article  
 
-	From within the clavin-rest project, run the following curl command to retrieve all relevant geonames data for each location:
+From within the clavin-rest project, run the following curl command to retrieve all relevant geonames data for each location:
 
 	curl -s --data src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotag
 
-	From within the clavin-rest project, run the following curl command to retrieve minimized geonames data for each location:
+From within the clavin-rest project, run the following curl command to retrieve minimized geonames data for each location:	
 
 	curl -s --data src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotagmin	
 
 ###	CLAVIN Rest web page
 
-	You can also see a very rudimentary web page by going to http://localhost:9090.  Copy and paste the Somalia-doc.txt file contents into the text area, and hit submit.  You'll wait for a few seconds (there is no loader to let you know its working), and voila! The map will be populated, and the resulting JSON will appear below the map. 
+You can also see a very rudimentary web page by going to http://localhost:9090.  Copy and paste the Somalia-doc.txt file contents into the text area, and hit submit.  You'll wait for a few seconds (there is no loader to let you know its working), and voila! The map will be populated, and the resulting JSON will appear below the map. 
