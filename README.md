@@ -7,7 +7,7 @@ We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP met
 
 ### Download the CLAVIN Rest Project
 
-    git clone https://github.com/Novetta/CLAVIN.git
+    git clone https://github.com/Novetta/CLAVIN-rest.git
     cd CLAVIN-rest
 	
 ### Download Geonames 
