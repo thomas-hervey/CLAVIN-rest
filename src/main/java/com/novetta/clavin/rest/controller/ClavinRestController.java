@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bericotech.clavin.GeoParser;
-import com.bericotech.clavin.resolver.ResolvedLocation;
+import com.novetta.clavin.GeoParser;
+import com.novetta.clavin.resolver.ResolvedLocation;
 import com.novetta.clavin.rest.command.BuildIndex;
 import com.novetta.clavin.rest.core.ResolvedLocations;
 import com.novetta.clavin.rest.core.ResolvedLocationsMinimum;
