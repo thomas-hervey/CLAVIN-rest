@@ -1,6 +1,6 @@
 package com.novetta.clavin.rest.core;
 
-import com.bericotech.clavin.resolver.ResolvedLocation;
+import com.novetta.clavin.resolver.ResolvedLocation;
 
 public class ResolvedLocationMinimum {
 	

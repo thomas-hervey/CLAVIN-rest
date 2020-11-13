@@ -2,12 +2,12 @@ package com.novetta.clavin.rest.index;
 
 import java.io.File;
 import java.io.IOException;
-import com.bericotech.clavin.resolver.ClavinLocationResolver;
-import com.bericotech.clavin.ClavinException;
-import com.bericotech.clavin.GeoParser;
-import com.bericotech.clavin.gazetteer.query.Gazetteer;
-import com.bericotech.clavin.gazetteer.query.LuceneGazetteer;
-import com.bericotech.clavin.extractor.ApacheExtractor;
+import com.novetta.clavin.resolver.ClavinLocationResolver;
+import com.novetta.clavin.ClavinException;
+import com.novetta.clavin.GeoParser;
+import com.novetta.clavin.gazetteer.query.Gazetteer;
+import com.novetta.clavin.gazetteer.query.LuceneGazetteer;
+import com.novetta.clavin.extractor.ApacheExtractor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

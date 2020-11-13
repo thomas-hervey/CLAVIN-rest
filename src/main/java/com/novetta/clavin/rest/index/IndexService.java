@@ -1,7 +1,7 @@
 package com.novetta.clavin.rest.index;
 
-import com.bericotech.clavin.GeoParser;
-import com.bericotech.clavin.resolver.ClavinLocationResolver;
+import com.novetta.clavin.GeoParser;
+import com.novetta.clavin.resolver.ClavinLocationResolver;
 
 public interface IndexService {
 
