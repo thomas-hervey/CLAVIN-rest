@@ -23,7 +23,6 @@ jobs:
       run: | 
         curl -O http://download.geonames.org/export/dump/allCountries.zip 
         unzip allCountries.zip 
-        mvn -B clean package
+        mvn -B clean package -Dmaven.test.skip=true
         java -Xmx4096m -jar -Dspring.profiles.active=Build target/clavin-rest.jar
-        java -Xmx2048m -jar target/clavin-rest.jar 
-        curl -s --data @src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotag
+        mvn -B clean package
