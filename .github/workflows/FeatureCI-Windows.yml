@@ -23,6 +23,6 @@ jobs:
       run: | 
         curl -O http://download.geonames.org/export/dump/allCountries.zip 
         unzip allCountries.zip 
-        mvn -B clean package -Dmaven.test.skip=true
-        java -Xmx4096m -jar -Dspring.profiles.active=Build target/clavin-rest.jar
+        mvn -B clean package '-Dmaven.test.skip=true'
+        java -Xmx4096m '-Dspring.profiles.active=Build' -jar target/clavin-rest.jar
         mvn -B clean package
