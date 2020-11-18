@@ -24,11 +24,15 @@ Look at (and edit if you so choose) the default configuration settings contained
 
 ### Build the ClAVIN Rest jar
 
-	mvn clean package
+	mvn clean package -Dmaven.test.skip=true
 
 ### Create a CLAVIN gazetteer 
     
     java -Xmx4096m -jar -Dspring.profiles.active=Build target/clavin-rest.jar
+	
+### Run the Integration Tests
+
+	mvn clean package
 
 ### Run the CLAVIN Rest server 
 
