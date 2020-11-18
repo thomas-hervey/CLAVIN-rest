@@ -22,7 +22,9 @@ We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP met
 
 Look at (and edit if you so choose) the default configuration settings contained within the application.yml.
 
-### Build the ClAVIN Rest jar
+### Build the CLAVIN Rest jar
+
+You'll need to skip the integration tests to build the jar, so that you can build your geonames gazetteer.
 
 	mvn clean package -Dmaven.test.skip=true
 
@@ -31,6 +33,8 @@ Look at (and edit if you so choose) the default configuration settings contained
     java -Xmx4096m -jar -Dspring.profiles.active=Build target/clavin-rest.jar
 	
 ### Run the Integration Tests
+
+Now that you've built the index, you can run the integration tests if you so choose. 
 
 	mvn clean package
 
