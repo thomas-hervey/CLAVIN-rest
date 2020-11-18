@@ -30,7 +30,7 @@ You'll need to skip the integration tests to build the jar, so that you can buil
 
 ### Create a CLAVIN gazetteer 
     
-    java -Xmx4096m -jar -Dspring.profiles.active=Build target/clavin-rest.jar
+    java -Xmx4096m -Dspring.profiles.active=Build -jar target/clavin-rest.jar
 	
 ### Run the Integration Tests
 
