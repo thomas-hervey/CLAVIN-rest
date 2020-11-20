@@ -71,6 +71,9 @@ final class GeoNamesIndexService implements IndexService {
 			extractor = new ApacheExtractor();
 			
 			/*
+			 * CLAVIN-Rest now supports AdaptNLP
+			 * https://github.com/Novetta/adaptnlp
+			 * 
 			 * Using the AdaptNLP Extractor requires an instance of AdaptNLP
 			 * running, and accessible to web calls.  The default constructor for
 			 * AdaptNlpExtractor sets host and port to 'localhost' and 5000 
