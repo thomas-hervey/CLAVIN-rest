@@ -77,7 +77,7 @@ final class GeoNamesIndexService implements IndexService {
 			 * respectively. You can alter this by passing (host, port) to
 			 * AdaptNlpExtractor(host, port). 
 			 */
-			extractor = new AdaptNlpExtractor();
+			//extractor = new AdaptNlpExtractor();
 			
 			
 			/*
