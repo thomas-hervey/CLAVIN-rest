@@ -1,9 +1,9 @@
-package com.bericotech.clavin.rest.core;
+package com.novetta.clavin.rest.core;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bericotech.clavin.resolver.ResolvedLocation;
+import com.novetta.clavin.resolver.ResolvedLocation;
 
 public class ResolvedLocations {
  

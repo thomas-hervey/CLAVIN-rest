@@ -4,7 +4,7 @@ function submit() {
     //alert($("#id_textarea").val());
     //console.log($("#id_textarea").val());
     $.ajax({
-	url: "api/v0/geotag",
+	url: "api/v1/geotag",
 	type: "POST",
 	contentType: "text/plain",
 	data: $("#id_textarea").val()
