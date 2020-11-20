@@ -52,11 +52,11 @@ From within the clavin-rest project, run the following curl command to retrieve 
 
 	curl -s --data @src/test/resources/Somalia-doc.txt --header "Content-Type: text/plain" http://localhost:9090/api/v1/geotagmin	
 
-###	CLAVIN Rest web page
+##	CLAVIN Rest web page
 
 You can also see a very rudimentary web page by going to http://localhost:9090.  Copy and paste the Somalia-doc.txt file contents into the text area, and hit submit.  You'll wait for a few seconds (there is no loader to let you know its working), and voila! The map will be populated, and the resulting JSON will appear below the map. 
 
-### CLAVIN Rest docker image
+## CLAVIN Rest docker image
 
 To build a docker image, you'll need to first tar.gz the IndexDirectory that contains the indexed geonames gazetteer. 
 	
@@ -70,3 +70,15 @@ To run the image in the foreground, you would then simply issue the docker run c
 
 	docker run -p 9090:9090 clavin-rest:latest
 	
+## Integration with Novetta AdaptNLP
+
+CLAVIN-Rest 1.0 using CLAVIN 3.0 can leverage AdaptNLP as a place name extractor.  Doing so requires an instance of AdaptNLP running, and accessible to web calls.  To use CLAVIN-Rest with AdaptNLP, you must edit com.novetta.clavin.rest.index.GeoNamesIndexService.java  in CLAVIN-Rest: 
+
+Comment out this line: 
+
+	extractor = new ApacheExtractor();
+
+Uncomment this line and pass host and port information to AdaptNlpExtractor, or use the default constructor which points to 'localhost:5000'. 
+
+	extractor = new AdaptNlpExtractor(host, port);
+
