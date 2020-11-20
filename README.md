@@ -1,6 +1,6 @@
 ![CLAVIN](https://github.com/Novetta/CLAVIN-Rest/blob/develop/img/clavinLogo.png?raw=true)
 
-![example branch parameter](https://github.com/Novetta/CLAVIN-Rest/workflows/master/badge.svg?branch=master)
+![example branch parameter](https://github.com/Novetta/CLAVIN-Rest/workflows/MasterCI/badge.svg?branch=master)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
