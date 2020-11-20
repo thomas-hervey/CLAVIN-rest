@@ -81,4 +81,6 @@ Comment out this line:
 Uncomment this line and pass host and port information to AdaptNlpExtractor, or use the default constructor which points to 'localhost:5000'. 
 
 	extractor = new AdaptNlpExtractor(host, port);
+	
+In the future, we'll make this all possible via configuration. 
 
