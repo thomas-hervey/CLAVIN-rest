@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.novetta</groupId>
 	<artifactId>CLAVIN-rest</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>clavin-rest</name>
 	<url>http://maven.apache.org</url>
@@ -236,7 +236,7 @@
 	                </execution>
    	            </executions>
 	            <configuration>
-		            <repository>${project.artifactId}</repository>
+		            <repository>${project.name}</repository>
 		            <buildArgs>
 	    	            <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 	                </buildArgs>
