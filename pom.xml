@@ -219,24 +219,6 @@
         		<version>${dockerfile-maven-version}</version>
 	            <executions>
 	                <execution>
-	                    <id>tag-latest</id>
-	                    <goals>
-	                        <goal>tag</goal>
-	                    </goals>
-	                    <configuration>
-	                        <tag>latest</tag>
-	                    </configuration>
-	                </execution>
-	                <execution>
-	                    <id>tag-version</id>
-	                    <goals>
-	                        <goal>tag</goal>
-	                    </goals>
-	                    <configuration>
-	                        <tag>${project.version}</tag>
-	                    </configuration>
-	                </execution>
-	                <execution>
 					    <id>push-version</id>
 					    <goals>
 	                        <goal>push</goal>
