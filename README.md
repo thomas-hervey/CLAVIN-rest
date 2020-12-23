@@ -74,6 +74,8 @@ To run the image in the foreground, you would then simply issue the docker run c
 
 	docker run -p 9090:9090 clavin-rest:latest
 	
+We also push containerized releases of CLAVIN-Rest to Docker Hub.  Visit our page at [novetta/clavin-rest](https://hub.docker.com/r/novetta/clavin-rest).
+	
 ## Integration with Novetta AdaptNLP
 
 CLAVIN-Rest 1.0 using CLAVIN 3.0 can leverage AdaptNLP as a place name extractor.  Doing so requires an instance of AdaptNLP running, and accessible to web calls.  To use CLAVIN-Rest with AdaptNLP, you must edit com.novetta.clavin.rest.index.GeoNamesIndexService.java in CLAVIN-Rest: 
@@ -105,8 +107,6 @@ CLAVIN-Rest 1.0 can also utilize CLAVIN-NERD 3.0. In the CLAVIN-Rest POM, find a
 		  	<artifactId>CLAVIN-nerd</artifactId>
 		  	<version>3.0.0</version>
 		</dependency>	
-
-
 ```
 
 You must edit com.novetta.clavin.rest.index.GeoNamesIndexService.java in CLAVIN-Rest: 
