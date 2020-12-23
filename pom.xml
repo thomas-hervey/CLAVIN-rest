@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.novetta</groupId>
 	<artifactId>CLAVIN-rest</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 	<name>clavin-rest</name>
 	<url>http://maven.apache.org</url>
@@ -35,10 +35,11 @@
 		  	<artifactId>CLAVIN</artifactId>
 		  	<version>3.0.0</version>
 		</dependency>
-<!-- 		<dependency>
-		  	<groupId>com.bericotech</groupId>
-		  	<artifactId>CLAVIN-NERD</artifactId>
-		  	<version>2.1.0</version>
+<!--
+ 		<dependency>
+		  	<groupId>com.novetta</groupId>
+		  	<artifactId>CLAVIN-nerd</artifactId>
+		  	<version>3.0.0</version>
 		</dependency>	
  -->	
 	</dependencies>
