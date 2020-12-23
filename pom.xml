@@ -116,6 +116,7 @@
 	   <maven.compiler.target>${java.version}</maven.compiler.target>
 	   <pmd.plugin.version>3.13.0</pmd.plugin.version>
 	   <dockerfile-maven-version>1.4.13</dockerfile-maven-version>
+	   <docker.org>novetta</docker.org>
 	</properties>
 		
 	<build>
@@ -220,7 +221,7 @@
 	                <execution>
 	                    <id>tag-latest</id>
 	                    <goals>
-	                        <goal>push</goal>
+	                        <goal>tag</goal>
 	                    </goals>
 	                    <configuration>
 	                        <tag>latest</tag>
@@ -229,12 +230,23 @@
 	                <execution>
 	                    <id>tag-version</id>
 	                    <goals>
-	                        <goal>push</goal>
+	                        <goal>tag</goal>
 	                    </goals>
 	                    <configuration>
 	                        <tag>${project.version}</tag>
 	                    </configuration>
 	                </execution>
+	                <execution>
+					    <id>push-version</id>
+					    <goals>
+	                        <goal>push</goal>
+					    </goals>
+					    <configuration>
+					        <repository>${docker.org}/${project.name}</repository>
+					        <tag>${project.version}</tag>
+					        <classifier>docker-info</classifier>
+					    </configuration>
+					</execution>
    	            </executions>
 	            <configuration>
 		            <repository>${project.name}</repository>
