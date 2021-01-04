@@ -7,7 +7,7 @@
 CLAVIN Rest
 ===========
 
-We have updated the CLAVIN REST server to use Spring Boot. The port and HTTP methods remain unchanged, but we did update the API version.  So whereas prior you would go to http://localhost:9090/api/v0/geotag, you will now go to http://localhost:9090/api/v1/geotag. The application now has a application.yml file that contains the available settings.  Here are the instructions for getting up and running.  
+CLAVIN-Rest is a microservice wrapper for [CLAVIN](https://github.com/Novetta/CLAVIN) or [CLAVIN-NERD](https://github.com/Novetta/CLAVIN-NERD). We have updated the CLAVIN REST project to use Spring Boot. The port and HTTP methods remain unchanged, but we did update the API version.  So whereas prior you would go to http://localhost:9090/api/v0/geotag, you will now go to http://localhost:9090/api/v1/geotag. The application now has a application.yml file that contains the available settings you can change to accommodate your needs.  Here are the instructions for getting up and running CLAVIN-Rest with CLAVIN and OpenNLP:  
 
 ### Download the CLAVIN Rest Project
 
@@ -74,9 +74,11 @@ To run the image in the foreground, you would then simply issue the docker run c
 
 	docker run -p 9090:9090 clavin-rest:latest
 	
+We also push containerized releases of CLAVIN-Rest to Docker Hub.  Visit our page at [novetta/clavin-rest](https://hub.docker.com/r/novetta/clavin-rest).
+	
 ## Integration with Novetta AdaptNLP
 
-CLAVIN-Rest 1.0 using CLAVIN 3.0 can leverage AdaptNLP as a place name extractor.  Doing so requires an instance of AdaptNLP running, and accessible to web calls.  To use CLAVIN-Rest with AdaptNLP, you must edit com.novetta.clavin.rest.index.GeoNamesIndexService.java  in CLAVIN-Rest: 
+CLAVIN-Rest 1.0 using CLAVIN 3.0 can leverage AdaptNLP as a place name extractor.  Doing so requires an instance of AdaptNLP running, and accessible to web calls.  To use CLAVIN-Rest with AdaptNLP, you must edit com.novetta.clavin.rest.index.GeoNamesIndexService.java in CLAVIN-Rest: 
 
 Comment out this line: 
 
@@ -86,5 +88,35 @@ Uncomment this line and pass host and port information to AdaptNlpExtractor, or 
 
 	extractor = new AdaptNlpExtractor(host, port);
 	
-In the future, we'll make this all possible via configuration. 
+In the future, we'll make this all possible via configuration. Assuming you already built the Index using Geonames as described above, you can now rebuild the package `mvn clean package`, start the server `java -Xmx2048m -jar target/clavin-rest.jar ` and send requests to the REST interfaces.
 
+## Integration with Novetta CLAVIN-NERD
+
+CLAVIN-Rest 1.0 can also utilize CLAVIN-NERD 3.0. In the CLAVIN-Rest POM, find and comment out the com.novetta.CLAVIN-3.0.0 dependency, and uncomment the com.Novetta.CLAVIN-nerd-3.0.0 dependency:  
+
+```xml
+<!--
+		<dependency>
+		  	<groupId>com.novetta</groupId>
+		  	<artifactId>CLAVIN</artifactId>
+		  	<version>3.0.0</version>
+		</dependency>
+ -->	
+ 		<dependency>
+		  	<groupId>com.novetta</groupId>
+		  	<artifactId>CLAVIN-nerd</artifactId>
+		  	<version>3.0.0</version>
+		</dependency>	
+```
+
+You must edit com.novetta.clavin.rest.index.GeoNamesIndexService.java in CLAVIN-Rest: 
+
+Comment out this line: 
+
+	extractor = new ApacheExtractor();
+
+Uncomment the line that refers to the StanfordExtractor():  
+
+	extractor = new StanfordExtractor();
+	
+In the future, we'll make this all possible via configuration. Assuming you already built the Index using Geonames as described above, you can now rebuild the package `mvn clean package`, start the server `java -Xmx2048m -jar target/clavin-rest.jar ` and send requests to the REST interfaces.

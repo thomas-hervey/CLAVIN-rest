@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.novetta</groupId>
 	<artifactId>CLAVIN-rest</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 	<name>clavin-rest</name>
 	<url>http://maven.apache.org</url>
@@ -35,10 +35,11 @@
 		  	<artifactId>CLAVIN</artifactId>
 		  	<version>3.0.0</version>
 		</dependency>
-<!-- 		<dependency>
-		  	<groupId>com.bericotech</groupId>
-		  	<artifactId>CLAVIN-NERD</artifactId>
-		  	<version>2.1.0</version>
+<!--
+ 		<dependency>
+		  	<groupId>com.novetta</groupId>
+		  	<artifactId>CLAVIN-nerd</artifactId>
+		  	<version>3.0.0</version>
 		</dependency>	
  -->	
 	</dependencies>
@@ -115,6 +116,7 @@
 	   <maven.compiler.target>${java.version}</maven.compiler.target>
 	   <pmd.plugin.version>3.13.0</pmd.plugin.version>
 	   <dockerfile-maven-version>1.4.13</dockerfile-maven-version>
+	   <docker.org>novetta</docker.org>
 	</properties>
 		
 	<build>
@@ -217,23 +219,16 @@
         		<version>${dockerfile-maven-version}</version>
 	            <executions>
 	                <execution>
-	                    <id>tag-latest</id>
-	                    <goals>
+					    <id>push-version</id>
+					    <goals>
 	                        <goal>push</goal>
-	                    </goals>
-	                    <configuration>
-	                        <tag>latest</tag>
-	                    </configuration>
-	                </execution>
-	                <execution>
-	                    <id>tag-version</id>
-	                    <goals>
-	                        <goal>push</goal>
-	                    </goals>
-	                    <configuration>
-	                        <tag>${project.version}</tag>
-	                    </configuration>
-	                </execution>
+					    </goals>
+					    <configuration>
+					        <repository>${docker.org}/${project.name}</repository>
+					        <tag>${project.version}</tag>
+					        <classifier>docker-info</classifier>
+					    </configuration>
+					</execution>
    	            </executions>
 	            <configuration>
 		            <repository>${project.name}</repository>
